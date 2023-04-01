@@ -1,0 +1,23 @@
+## feature parameters
+# 1s = 43frame
+SR = 22050
+N_FFT = 2048
+N_HOP = 512
+N_MEL = 128
+H_MEL = 81
+
+## data devide
+CHUNK_SIZE = 43
+N_CHUNK = 72
+N_FRAME = N_CHUNK * CHUNK_SIZE
+FRAME_PER_SEC = SR / N_HOP
+SEC_PER_CHUNK = round(CHUNK_SIZE / FRAME_PER_SEC)
+
+## training parameters
+SHAPE = (N_MEL, None, 1)
+BATCH_SIZE = 16
+LR = 0.0001
+EPOCHS = 1000
+PATIENCE = 100
+VALIDATION_STEPS = 20
+

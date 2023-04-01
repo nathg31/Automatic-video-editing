@@ -1,0 +1,32 @@
+Extracting features
+Please start by replacing 'source_path' with the audio path in extract_spectrogram.py.
+
+Execute.
+
+python . /preprocess/extract_spectrogram.py
+
+
+Pre-training the model for testing
+Replace the 'test_feature_files' and 'test_annotation_files' arguments in constant.py with the extracted feature joblib file and the joblib file with the specified label format, respectively, where the label format is
+
+dict = { 'song_name' = [[0, 10], [52, 80], ...] , ...}
+Execute.
+
+python . /test.py -n DeepChorus -m Deepchorus_2021
+This program returns the R, P, F and AUC results for the test set.
+
+
+
+Citation will be updated in parallel after the conference.
+Training
+To train, replace the "train_feature_files" and "train_annotation_files" arguments in constant.py with extracted feature joblib files and joblib files in the specified label format, where the label format is the same as above. Execute.
+
+python . /train.py -n DeepChorus -m Deepchorus_20220304
+The trained model will be saved in the . /model folder
+
+Citation
+The paper was published in ICASSP 2022 and is currently uploaded on Arxiv: [pdf]
+
+Citation will be updated in parallel after the conference.
+
+Translated with www.DeepL.com/Translator (free version)

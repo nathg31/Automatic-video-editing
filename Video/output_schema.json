@@ -1,0 +1,20 @@
+[
+    {
+        "video_url": {
+            "type": "string",
+            "description": "path to the video"
+        },
+        "segments_delimitation": {
+            "type": "list[list[int, int]]",
+            "description": "list of int tuple delimiting segments of the video in the form [first frame, last frame] of each segment"
+        },
+        "segments_score": {
+            "type": "list[int]",
+            "description": "Score of each video segment computed by the scoring model"
+        },
+        "segment_length": {
+            "type": "list[int]",
+            "description": "Lenght of each video segment"
+        }
+    }
+]
